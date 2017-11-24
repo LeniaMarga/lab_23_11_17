@@ -1,0 +1,9 @@
+<% @students.each do |student| %>
+<div class="student">
+  <p>Name: <%= student.full_name() %></p>
+  <p>Age: <%= student.age %> </p>
+  <p>House: <%= student.house.name %></p>
+  <p><a class="body-link" href="/students/<%= student.id %>">Show Student</a></p>
+  <hr>
+</div>
+<% end %>

@@ -1,0 +1,51 @@
+<form method="post" action="/students">
+
+  <div class="field-group">
+    <label for="first-name-field" class="label">First Name:</label>
+    <div class="field">
+      <input
+        type="text"
+        name="first_name"
+        id="first-name-field"
+        placeholder="First name"
+        required
+      />
+   </div>
+  </div>
+
+  <div class="field-group">
+    <label for="last-name-field" class="label">Last Name:</label>
+    <div class="field">
+      <input
+        type="text"
+        name="last_name"
+        id="last-name-field"
+        placeholder="Last name"
+        required
+      />
+    </div>
+  </div>
+
+  <div class= "field-group">
+    <label for= "house-selection" class="label">House:</label>
+    <div class="field">
+      <select name="house_id" id="house_selection">
+        <% @houses.each do |house| %>
+        <option value= <%=house.id%>> <%=house.name%></option>
+        <% end %>
+      </select>
+    </div>
+
+  <div class="field-group">
+    <label for="age-field" class="label">Age:</label>
+    <div class="field">
+      <input
+        type="number"
+        name="age"
+        id="age-field"
+      />
+    </div>
+  </div>
+
+  <button class="big-button button">Save Student</button>
+</form>
